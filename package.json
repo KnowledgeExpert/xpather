@@ -26,7 +26,8 @@
     "compile-test-watch": "tsc -w --project test",
     "test-watch": "nodemon --exec jasmine ./built/test/**/*.test.js",
     "pretest": "npm run clean && npm run compile-test",
-    "test": "nyc --report=lcov jasmine ./built/test/**/*.test.js",
+    "test": "jasmine ./built/test/**/*.test.js",
+    "test-coverage": "nyc --report=lcov npm test",
     "build": "npm test && npm run clean && npm run compile"
   },
   "dependencies": {
