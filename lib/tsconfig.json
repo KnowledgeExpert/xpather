@@ -1,0 +1,14 @@
+  {
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "declaration": false,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "outDir": "../built",
+    "types": ["node"]
+  }
+}
