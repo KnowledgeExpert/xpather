@@ -2,17 +2,11 @@
   "name": "xpather",
   "version": "0.0.1",
   "description": "Xpath expressions generator",
-  "main": "./built/index.js",
-  "typing": "./built/index.d.ts",
-  "scripts": {
-    "clean": "rm -rf ./built && rm -rf ./.nyc_output && rm -f package-lock.json",
-    "compile-test": "tsc --project test",
-    "compile": "tsc --project lib",
-    "compile-test-watch": "tsc -w --project test",
-    "test-watch": "nodemon --exec jasmine ./built/test/**/*.test.js",
-    "pretest": "npm run clean && npm run compile-test",
-    "test": "nyc --report=lcov jasmine ./built/test/**/*.test.js",
-    "build": "npm test && npm run clean && npm run compile"
+  "main": "built/index.js",
+  "typing": "built/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/KnowledgeExpert/xpather.git"
   },
   "keywords": [
     "xpath",
@@ -24,7 +18,17 @@
     "name": "Alexander Popov",
     "email": "aleksander.popov.93@gmail.com"
   },
-  "license": "ISC",
+  "license": "Apache-2.0",
+  "scripts": {
+    "clean": "rm -rf ./built && rm -rf ./.nyc_output && rm -f package-lock.json",
+    "compile-test": "tsc --project test",
+    "compile": "tsc --project lib",
+    "compile-test-watch": "tsc -w --project test",
+    "test-watch": "nodemon --exec jasmine ./built/test/**/*.test.js",
+    "pretest": "npm run clean && npm run compile-test",
+    "test": "nyc --report=lcov jasmine ./built/test/**/*.test.js",
+    "build": "npm test && npm run clean && npm run compile"
+  },
   "dependencies": {
     "typescript": "2.9.2",
     "@types/node": "10.3.4"
