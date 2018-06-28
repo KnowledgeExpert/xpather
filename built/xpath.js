@@ -6,7 +6,7 @@ class Xpath {
         this.xpathString = xpathString + conditionsString;
     }
     static x(tag, ...conditions) {
-        return new Xpath(tag, ...conditions);
+        return new Xpath(`//${tag}`, ...conditions);
     }
     descendant(xpathString, ...conditions) {
         return new Xpath(`${this.xpathString}//${xpathString}`, ...conditions);
@@ -56,6 +56,5 @@ class Xpath {
     }
 }
 Xpath.root = new Xpath('/.');
-Xpath.page = new Xpath('/.');
 exports.Xpath = Xpath;
 //# sourceMappingURL=xpath.js.map

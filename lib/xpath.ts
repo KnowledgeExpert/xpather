@@ -4,10 +4,9 @@ import {Condition} from "./condition";
 export class Xpath {
     private readonly xpathString: string;
     static readonly root = new Xpath('/.');
-    static readonly page = new Xpath('/.');
 
     static x(tag: string, ...conditions: Condition[]) {
-        return new Xpath(tag, ...conditions);
+        return new Xpath(`//${tag}`, ...conditions);
     }
 
     constructor(xpathString: string, ...conditions: Condition[]) {

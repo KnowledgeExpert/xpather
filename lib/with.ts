@@ -17,8 +17,8 @@ export namespace With {
             : new Condition(`@${attributeName}`) ;
     }
 
-    export function exactAttribute(attributeName?: string, attributeValue?: string): Condition {
-        return new Condition(`@${attributeName} = '${attributeValue}'`); // todo change to filter by any attribute, attribute name only
+    export function exactAttribute(attributeName: string, attributeValue: string): Condition {
+        return new Condition(`@${attributeName} = '${attributeValue}'`);
     }
 
     export function value(value: string): Condition {

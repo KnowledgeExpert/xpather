@@ -18,7 +18,7 @@ var With;
     }
     With.attribute = attribute;
     function exactAttribute(attributeName, attributeValue) {
-        return new condition_1.Condition(`@${attributeName} = '${attributeValue}'`); // todo change to filter by any attribute, attribute name only
+        return new condition_1.Condition(`@${attributeName} = '${attributeValue}'`);
     }
     With.exactAttribute = exactAttribute;
     function value(value) {
