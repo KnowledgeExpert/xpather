@@ -1,6 +1,6 @@
-import {Describe, It} from "jasmine-cookies";
-import {Xpath} from "../lib/xpath";
-import {With} from "../lib";
+import { Describe, It } from 'jasmine-cookies';
+import { Xpath } from '../lib/xpath';
+import { With } from '../lib';
 
 declare let expect;
 
@@ -125,7 +125,7 @@ Describe('xpath', () => {
     });
 
     It('build and toString', () => {
-       expect(Xpath.root.toString()).toBe(Xpath.root.build())
+        expect(Xpath.root.toString()).toBe(Xpath.root.build())
     });
 
 });

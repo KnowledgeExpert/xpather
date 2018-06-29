@@ -16,7 +16,7 @@ Xpather is a small module which provides simple and concise api for XPath genera
 
 `JavaScript`
 ```
-const xpather = require("xpather");
+const xpather = require('xpather');
 const x = xpather.x;
 const With = xpather.With;
 const root = xpather.root;

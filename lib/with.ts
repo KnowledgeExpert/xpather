@@ -1,19 +1,18 @@
 // Copyright 2018 Knowledge Expert SA
 //
-// Licensed under the Apache License, Version 2.0 (the "License");
+// Licensed under the Apache License, Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
 // http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
+// distributed under the License is distributed on an 'AS IS' BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {Condition} from "./condition";
-
+import { Condition } from './condition';
 
 export namespace With {
 
@@ -28,7 +27,7 @@ export namespace With {
     export function attribute(attributeName: string, attributeValue?: string): Condition {
         return attributeValue
             ? new Condition(`contains(@${attributeName}, '${attributeValue}')`)
-            : new Condition(`@${attributeName}`) ;
+            : new Condition(`@${attributeName}`);
     }
 
     export function exactAttribute(attributeName: string, attributeValue: string): Condition {
@@ -64,7 +63,7 @@ export namespace With {
     }
 
     export function positionLast(): Condition {
-        return new Condition(`last()`);
+        return new Condition('last()');
     }
 
     export function count(tag: string, count: number): Condition {

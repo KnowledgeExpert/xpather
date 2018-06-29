@@ -1,6 +1,6 @@
-import {Describe, It} from "jasmine-cookies";
-import {Xpath} from "../lib/xpath";
-import {With} from "../lib";
+import { Describe, It } from 'jasmine-cookies';
+import { Xpath } from '../lib/xpath';
+import { With } from '../lib';
 
 declare let expect;
 
@@ -17,8 +17,8 @@ Describe('condition', () => {
     });
 
     It('text', () => {
-       expect(Xpath.root.child('*', With.text('foo')).build())
-           .toBe(`/./*[contains(normalize-space(.), 'foo')]`);
+        expect(Xpath.root.child('*', With.text('foo')).build())
+            .toBe(`/./*[contains(normalize-space(.), 'foo')]`);
     });
 
     It('exact text', () => {
