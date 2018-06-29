@@ -2,7 +2,8 @@ git:
   depth: 1
 
 language: node_js
-node: v8.9.1
+node_js:
+  - "8"
 
 before_install: nvm install node && npm install -g npm@latest
 install: npm install
