@@ -1,5 +1,7 @@
 # Xpather
 
+[![NPM version](https://img.shields.io/npm/v/nyc.svg)](https://www.npmjs.com/package/xpather)
+[![Coverage Status](https://coveralls.io/repos/github/KnowledgeExpert/xpather/badge.svg?branch=master)](https://coveralls.io/github/KnowledgeExpert/xpather?branch=master)
 Xpather is a small module which provides simple and concise api for XPath generating.
 
 ## Installation
