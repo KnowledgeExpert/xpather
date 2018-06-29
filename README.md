@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.com/KnowledgeExpert/xpather.svg?branch=master)](https://travis-ci.com/KnowledgeExpert/xpather)
 [![Coverage Status](https://coveralls.io/repos/github/KnowledgeExpert/xpather/badge.svg?branch=master)](https://coveralls.io/github/KnowledgeExpert/xpather?branch=master)
-![NPM version](https://img.shields.io/npm/v/npm.svg)
-![NPM downloads per month](https://img.shields.io/npm/dm/selenidejs.svg)
+![NPM version](https://img.shields.io/npm/v/xpather.svg)
+![NPM downloads per month](https://img.shields.io/npm/dm/xpather.svg)
 
 
 Xpather is a small module which provides simple and concise api for XPath generating.
