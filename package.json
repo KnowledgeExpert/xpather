@@ -26,7 +26,7 @@
     "compile-test-watch": "tsc -w --project test",
     "test-watch": "nodemon --exec jasmine ./built/test/**/*.test.js",
     "pretest": "npm run clean && npm run compile-test",
-    "test": "nyc --check-coverage --lines 100 --functions 100 --branches 100 jasmine ./built/test/**/*.test.js",
+    "test": "nyc --reporter=lcov --check-coverage --lines 100 --functions 100 --branches 100 jasmine ./built/test/**/*.test.js",
     "build": "npm test && npm run clean && npm run compile"
   },
   "dependencies": {
@@ -34,6 +34,7 @@
     "@types/node": "10.3.4"
   },
   "devDependencies": {
+    "coveralls": "3.0.1",
     "jasmine-cookies": "0.1.3",
     "nodemon": "1.17.3",
     "nyc": "12.0.2"
