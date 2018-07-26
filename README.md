@@ -6,7 +6,7 @@
 ![NPM downloads per month](https://img.shields.io/npm/dm/xpather.svg)
 
 
-Xpather is a small module which provides simple and concise api for XPath generating.
+Xpather is a small module which provides simple and concise api for XPath generation.
 
 ## Installation
 
