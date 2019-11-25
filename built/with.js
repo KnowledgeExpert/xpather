@@ -17,11 +17,15 @@ const condition_1 = require("./condition");
 var With;
 (function (With) {
     function text(text) {
-        return new condition_1.Condition(`contains(normalize-space(.), '${text}')`);
+        return text.includes("'")
+            ? new condition_1.Condition(`contains(normalize-space(.), "${text}")`)
+            : new condition_1.Condition(`contains(normalize-space(.), '${text}')`);
     }
     With.text = text;
     function exactText(exactText) {
-        return new condition_1.Condition(`text() = '${exactText}'`);
+        return exactText.includes("'")
+            ? new condition_1.Condition(`text() = "${exactText}"`)
+            : new condition_1.Condition(`text() = '${exactText}'`);
     }
     With.exactText = exactText;
     function attribute(attributeName, attributeValue) {
