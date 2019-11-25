@@ -17,11 +17,15 @@ import { Condition } from './condition';
 export namespace With {
 
     export function text(text: string): Condition {
-        return new Condition(`contains(normalize-space(.), '${text}')`);
+        return text.includes("'")
+            ? new Condition(`contains(normalize-space(.), "${text}")`)
+            : new Condition(`contains(normalize-space(.), '${text}')`);
     }
 
     export function exactText(exactText: string): Condition {
-        return new Condition(`text() = '${exactText}'`);
+        return exactText.includes("'")
+            ? new Condition(`text() = "${exactText}"`)
+            : new Condition(`text() = '${exactText}'`);
     }
 
     export function attribute(attributeName: string, attributeValue?: string): Condition {
