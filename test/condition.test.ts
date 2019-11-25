@@ -21,9 +21,19 @@ Describe('condition', () => {
             .toBe(`/./*[contains(normalize-space(.), 'foo')]`);
     });
 
+    It('text with single quote', () => {
+        expect(Xpath.root.child('*', With.text(`foo'`)).build())
+            .toBe(`/./*[contains(normalize-space(.), "foo'")]`);
+    });
+
     It('exact text', () => {
         expect(Xpath.root.child('*', With.exactText('foo')).build())
             .toBe(`/./*[text() = 'foo']`);
+    });
+
+    It('exact text with single quote', () => {
+        expect(Xpath.root.child('*', With.exactText(`foo'`)).build())
+            .toBe(`/./*[text() = "foo'"]`);
     });
 
     It('attribute', () => {
