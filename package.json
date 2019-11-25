@@ -1,6 +1,6 @@
 {
   "name": "xpather",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Xpath expressions generator",
   "main": "built/index.js",
   "typing": "built/index.d.ts",
